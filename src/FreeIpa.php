@@ -20,16 +20,16 @@
 
 declare(strict_types=1);
 
-namespace Gnumoksha\FreeIpa;
+namespace Pugovok\FreeIpa;
 
-use Gnumoksha\FreeIpa\Infra\Json\JsonException;
-use Gnumoksha\FreeIpa\Infra\Rpc\ClientBuilder;
-use Gnumoksha\FreeIpa\Infra\Rpc\PluginClientBuilder;
-use Gnumoksha\FreeIpa\Infra\Rpc\Request\Body as RequestBodyInterface;
-use Gnumoksha\FreeIpa\Infra\Rpc\Request\CommonBody as CommonRequestBody;
-use Gnumoksha\FreeIpa\Infra\Rpc\Response\Body as ResponseBodyInterface;
-use Gnumoksha\FreeIpa\Model\User\UserRepository;
-use Gnumoksha\FreeIpa\Model\Group\GroupRepository;
+use Pugovok\FreeIpa\Infra\Json\JsonException;
+use Pugovok\FreeIpa\Infra\Rpc\ClientBuilder;
+use Pugovok\FreeIpa\Infra\Rpc\PluginClientBuilder;
+use Pugovok\FreeIpa\Infra\Rpc\Request\Body as RequestBodyInterface;
+use Pugovok\FreeIpa\Infra\Rpc\Request\CommonBody as CommonRequestBody;
+use Pugovok\FreeIpa\Infra\Rpc\Response\Body as ResponseBodyInterface;
+use Pugovok\FreeIpa\Model\User\UserRepository;
+use Pugovok\FreeIpa\Model\Group\GroupRepository;
 use Psr\Http\Client\ClientExceptionInterface;
 
 /**

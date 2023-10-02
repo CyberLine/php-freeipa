@@ -20,7 +20,7 @@
 
 declare(strict_types=1);
 
-namespace Gnumoksha\FreeIpa\Infra\Rpc\Response;
+namespace Pugovok\FreeIpa\Infra\Rpc\Response;
 
 use JetBrains\PhpStorm\ArrayShape;
 
@@ -79,7 +79,7 @@ class CommonBody implements Body
 
     /**
      * {@inheritDoc}
-     * @see \Gnumoksha\FreeIpa\Infra\Rpc\Request\CommonBody will send id as string
+     * @see \Pugovok\FreeIpa\Infra\Rpc\Request\CommonBody will send id as string
      */
     public function getId(): ?string
     {

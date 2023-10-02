@@ -20,7 +20,7 @@
 
 declare(strict_types=1);
 
-namespace Gnumoksha\FreeIpa\Infra\Rpc\Response;
+namespace Pugovok\FreeIpa\Infra\Rpc\Response;
 
 use JsonSerializable;
 

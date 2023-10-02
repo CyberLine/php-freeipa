@@ -20,7 +20,7 @@
 
 declare(strict_types=1);
 
-namespace Gnumoksha\FreeIpa\Infra\Rpc;
+namespace Pugovok\FreeIpa\Infra\Rpc;
 
 use Psr\Http\Client\ClientExceptionInterface;
 

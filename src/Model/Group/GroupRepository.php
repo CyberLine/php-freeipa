@@ -20,14 +20,14 @@
 
 declare(strict_types=1);
 
-namespace Gnumoksha\FreeIpa\Model\Group;
+namespace Pugovok\FreeIpa\Model\Group;
 
 use BadMethodCallException;
-use Gnumoksha\FreeIpa\Infra\Json\JsonException;
-use Gnumoksha\FreeIpa\Infra\Repository\BaseRepository;
-use Gnumoksha\FreeIpa\Infra\Rpc\Client;
-use Gnumoksha\FreeIpa\Infra\Rpc\Request\Body as RequestBodyInterface;
-use Gnumoksha\FreeIpa\Infra\Rpc\Response\Body as ResponseBodyInterface;
+use Pugovok\FreeIpa\Infra\Json\JsonException;
+use Pugovok\FreeIpa\Infra\Repository\BaseRepository;
+use Pugovok\FreeIpa\Infra\Rpc\Client;
+use Pugovok\FreeIpa\Infra\Rpc\Request\Body as RequestBodyInterface;
+use Pugovok\FreeIpa\Infra\Rpc\Response\Body as ResponseBodyInterface;
 use Psr\Http\Client\ClientExceptionInterface;
 
 use function strlen;
@@ -75,7 +75,7 @@ class GroupRepository extends BaseRepository
      * @throws JsonException
      * @throws ClientExceptionInterface
      *
-     * @see \Gnumoksha\FreeIpa\Model\Group\GroupRepository::find() base method
+     * @see \Pugovok\FreeIpa\Model\Group\GroupRepository::find() base method
      */
     public function findBy(string $field, string $value): ResponseBodyInterface
     {

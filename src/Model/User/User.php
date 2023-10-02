@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Gnumoksha\FreeIpa\Model\User;
+namespace Pugovok\FreeIpa\Model\User;
 
 final class User
 {

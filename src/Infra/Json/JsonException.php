@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Gnumoksha\FreeIpa\Infra\Json;
+namespace Pugovok\FreeIpa\Infra\Json;
 
 /**
  * @internal

@@ -20,7 +20,7 @@
 
 declare(strict_types=1);
 
-namespace Gnumoksha\FreeIpa;
+namespace Pugovok\FreeIpa;
 
 class Options
 {

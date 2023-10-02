@@ -20,7 +20,7 @@
 
 declare(strict_types=1);
 
-namespace Gnumoksha\FreeIpa\Infra\Rpc\Request;
+namespace Pugovok\FreeIpa\Infra\Rpc\Request;
 
 use JetBrains\PhpStorm\ArrayShape;
 use stdClass;

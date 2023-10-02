@@ -20,10 +20,10 @@
 
 declare(strict_types=1);
 
-namespace Gnumoksha\FreeIpa\Infra\Rpc\Response;
+namespace Pugovok\FreeIpa\Infra\Rpc\Response;
 
-use Gnumoksha\FreeIpa\Infra\Json\Json;
-use Gnumoksha\FreeIpa\Infra\Json\JsonException;
+use Pugovok\FreeIpa\Infra\Json\Json;
+use Pugovok\FreeIpa\Infra\Json\JsonException;
 use Psr\Http\Message\ResponseInterface;
 
 class CommonBodyBuilder implements BodyBuilder

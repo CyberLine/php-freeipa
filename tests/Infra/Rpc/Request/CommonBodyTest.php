@@ -20,9 +20,9 @@
 
 declare(strict_types=1);
 
-namespace Gnumoksha\FreeIpa\Infra\Rpc\Request;
+namespace Pugovok\FreeIpa\Infra\Rpc\Request;
 
-use Gnumoksha\FreeIpa\Infra\Json\Json;
+use Pugovok\FreeIpa\Infra\Json\Json;
 use PHPUnit\Framework\TestCase;
 
 class CommonBodyTest extends TestCase

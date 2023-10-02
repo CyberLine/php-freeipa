@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Gnumoksha\FreeIpa\Model\Group;
+namespace Pugovok\FreeIpa\Model\Group;
 
 final class Group
 {

@@ -20,7 +20,7 @@
 
 declare(strict_types=1);
 
-namespace Gnumoksha\FreeIpa\Infra\Rpc\Response;
+namespace Pugovok\FreeIpa\Infra\Rpc\Response;
 
 /**
  * @see https://access.redhat.com/articles/2728021#request-response

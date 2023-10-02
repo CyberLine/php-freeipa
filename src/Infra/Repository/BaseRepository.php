@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Gnumoksha\FreeIpa\Infra\Repository;
+namespace Pugovok\FreeIpa\Infra\Repository;
 
 class BaseRepository
 {
