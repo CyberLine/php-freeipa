@@ -17,30 +17,29 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
 declare(strict_types=1);
 
 namespace Gnumoksha\FreeIpa\Model\Group;
 
 use BadMethodCallException;
+use Gnumoksha\FreeIpa\Infra\Json\JsonException;
 use Gnumoksha\FreeIpa\Infra\Repository\BaseRepository;
 use Gnumoksha\FreeIpa\Infra\Rpc\Client;
 use Gnumoksha\FreeIpa\Infra\Rpc\Request\Body as RequestBodyInterface;
 use Gnumoksha\FreeIpa\Infra\Rpc\Response\Body as ResponseBodyInterface;
+use Psr\Http\Client\ClientExceptionInterface;
 
 use function strlen;
 
-/**
- *
- */
 class GroupRepository extends BaseRepository
 {
     /** @var string */
     private const TOPIC = 'group';
 
-    /** @var \Gnumoksha\FreeIpa\Infra\Rpc\Client */
-    private $client;
-    /** @var \Gnumoksha\FreeIpa\Infra\Rpc\Request\Body */
-    private $body;
+    private Client $client;
+
+    private RequestBodyInterface $body;
 
     public function __construct(Client $client, RequestBodyInterface $body)
     {
@@ -50,8 +49,8 @@ class GroupRepository extends BaseRepository
 
     /**
      * @TODO document string-only argument
-     * @throws \Gnumoksha\FreeIpa\Infra\Json\JsonException
-     * @throws \Psr\Http\Client\ClientExceptionInterface
+     * @throws JsonException
+     * @throws ClientExceptionInterface
      */
     public function find(array $arguments, array $options): ResponseBodyInterface
     {
@@ -73,12 +72,12 @@ class GroupRepository extends BaseRepository
     }
 
     /**
-     * @throws \Gnumoksha\FreeIpa\Infra\Json\JsonException
-     * @throws \Psr\Http\Client\ClientExceptionInterface
+     * @throws JsonException
+     * @throws ClientExceptionInterface
      *
      * @see \Gnumoksha\FreeIpa\Model\Group\GroupRepository::find() base method
      */
-    public function findBy(string $field, $value): ResponseBodyInterface
+    public function findBy(string $field, string $value): ResponseBodyInterface
     {
         return $this->find([], [$field => $value]);
     }
@@ -87,8 +86,8 @@ class GroupRepository extends BaseRepository
      * @param string $group
      * @param string $uid
      * @return ResponseBodyInterface
-     * @throws \Gnumoksha\FreeIpa\Infra\Json\JsonException
-     * @throws \Psr\Http\Client\ClientExceptionInterface
+     * @throws JsonException
+     * @throws ClientExceptionInterface
      */
     public function addMember(string $group, string $uid): ResponseBodyInterface
     {
@@ -109,7 +108,7 @@ class GroupRepository extends BaseRepository
         return $this->client->sendRequest($body);
     }
 
-    public function __call($name, $arguments)
+    public function __call(string $name, array $arguments): ResponseBodyInterface
     {
         if (strncmp($name, 'findBy', 6) === 0 && strlen($name) > 6) {
             $field = str_replace('findBy', '', $name);
