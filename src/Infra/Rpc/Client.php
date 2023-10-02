@@ -17,29 +17,30 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
 declare(strict_types=1);
 
-namespace Gnumoksha\FreeIpa\Infra\Rpc;
+namespace Pugovok\FreeIpa\Infra\Rpc;
 
-use Gnumoksha\FreeIpa\Infra\Json\Json;
-use Gnumoksha\FreeIpa\Infra\Json\JsonException;
-use Gnumoksha\FreeIpa\Infra\Rpc\Request\Body as RequestBodyInterface;
-use Gnumoksha\FreeIpa\Infra\Rpc\Response\Body as ResponseBodyInterface;
-use Gnumoksha\FreeIpa\Infra\Rpc\Response\BodyBuilder as ResponseBodyBuilder;
-use Gnumoksha\FreeIpa\Options;
+use Pugovok\FreeIpa\Infra\Json\Json;
+use Pugovok\FreeIpa\Infra\Json\JsonException;
+use Pugovok\FreeIpa\Infra\Rpc\Request\Body as RequestBodyInterface;
+use Pugovok\FreeIpa\Infra\Rpc\Response\Body as ResponseBodyInterface;
+use Pugovok\FreeIpa\Infra\Rpc\Response\BodyBuilder as ResponseBodyBuilder;
+use Pugovok\FreeIpa\Options;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 
 class Client
 {
-    /** @var \Gnumoksha\FreeIpa\Options */
+    /** @var \Pugovok\FreeIpa\Options */
     private $options;
     /** @var \Psr\Http\Client\ClientInterface */
     private $httpClient;
     /** @var \Psr\Http\Message\RequestFactoryInterface */
     private $requestFactory;
-    /** @var \Gnumoksha\FreeIpa\Infra\Rpc\Response\BodyBuilder */
+    /** @var \Pugovok\FreeIpa\Infra\Rpc\Response\BodyBuilder */
     private $responseBodyBuilder;
     /** @var bool */
     private $connected;
@@ -83,7 +84,7 @@ class Client
     }
 
     /**
-     * @throws \Gnumoksha\FreeIpa\Infra\Json\JsonException
+     * @throws \Pugovok\FreeIpa\Infra\Json\JsonException
      * @throws \Psr\Http\Client\ClientExceptionInterface
      *
      * @see https://access.redhat.com/articles/2728021#end-points documentation

@@ -17,18 +17,19 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
 declare(strict_types=1);
 
-namespace Gnumoksha\FreeIpa\EndToEnd;
+namespace Pugovok\FreeIpa\EndToEnd;
 
-use Gnumoksha\FreeIpa\FreeIpa;
-use Gnumoksha\FreeIpa\Infra\Rpc\Request\CommonBody;
-use Gnumoksha\FreeIpa\Options;
+use Pugovok\FreeIpa\FreeIpa;
+use Pugovok\FreeIpa\Infra\Rpc\Request\CommonBody;
+use Pugovok\FreeIpa\Options;
 use PHPUnit\Framework\TestCase;
 
 class FreeIpaTest extends TestCase
 {
-    /** @var \Gnumoksha\FreeIpa\FreeIpa */
+    /** @var \Pugovok\FreeIpa\FreeIpa */
     private $ipa;
 
     public function setUp(): void
