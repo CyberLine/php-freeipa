@@ -1,5 +1,5 @@
 {
-  "name": "gnumoksha/php-freeipa",
+  "name": "pugovok/php-freeipa",
   "type": "library",
   "description": "PHP client to FreeIPA HTTP-RPC",
   "keywords": [
@@ -7,7 +7,7 @@
     "Red Hat Identity Manager",
     "IdM server"
   ],
-  "homepage": "https://github.com/gnumoksha/php-freeipa",
+  "homepage": "https://github.com/pugovok/php-freeipa",
   "license": [
     "LGPL-3.0+"
   ],
@@ -44,12 +44,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Gnumoksha\\FreeIpa\\": "src/"
+      "Pugovok\\FreeIpa\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Gnumoksha\\FreeIpa\\": "tests"
+      "Pugovok\\FreeIpa\\": "tests"
     }
   },
   "scripts": {
